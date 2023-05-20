@@ -1,17 +1,10 @@
-<<<<<<< Updated upstream
-const express = require('express');
-const routes = require('./routes');
-=======
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
->>>>>>> Stashed changes
 
 const app = express();
 const PORT = 3000;
 
-<<<<<<< Updated upstream
-=======
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -32,7 +25,6 @@ mongoose.connection.on("error", (err) => {
   console.error("Error connecting to MongoDB:", err);
 });
 
->>>>>>> Stashed changes
 routes(app);
 
 app.get("/", (req, res) => {
