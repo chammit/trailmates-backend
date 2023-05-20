@@ -8,7 +8,7 @@ const PORT = 3000;
 
 // mongoose connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/trailmates', {
+mongoose.connect('mongodb://0.0.0.0:27017/trailmates', {
 	useNewUrlParser: true,
 	// useUnifiedTopology: true
 });
