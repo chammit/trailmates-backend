@@ -13,12 +13,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/trailmates', {
 	// useUnifiedTopology: true
 });
 
-// const db = mongoose.connection;
-// db.on("error", console.error.bind(console, "connection error: "));
-// db.once("open", function () {
-// 	console.log("Connected to MongoDB successfully");
-// });
-
 // bodyparser setup
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
