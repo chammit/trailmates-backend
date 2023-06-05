@@ -32,3 +32,13 @@ exports.getTrailWithId = async (req, res) => {
 		res.send(err);
 	});
 };
+
+exports.updateTrail = async (req, res) => {
+	// { new: true } means response will show the newly updated version instead of the original
+	await Trail.findOneAndUpdate({ _id: req.params.trailId }, req.body, { new: true }).then((trail) => {
+		res.json(trail);
+	}).catch((err) => {
+		console.log(err);
+		res.send(err);
+	});
+};
