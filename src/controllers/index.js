@@ -23,3 +23,12 @@ exports.getTrails = async (req, res) => {
 		res.send(err);
 	});
 };
+
+exports.getTrailWithId = async (req, res) => {
+	await Trail.findById(req.params.trailId).then((trail) => {
+		res.json(trail);
+	}).catch((err) => {
+		console.log(err);
+		res.send(err);
+	});
+};
