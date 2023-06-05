@@ -17,6 +17,9 @@ mongoose.connect('mongodb://127.0.0.1:27017/trailmates', {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// serving static files
+app.use(express.static('public'));
+
 routes(app);
 
 app.get('/', (req, res) => {
