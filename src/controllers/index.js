@@ -14,3 +14,12 @@ exports.addNewTrail = async (req, res) => {
 		res.send(err);
 	});
 };
+
+exports.getTrails = async (req, res) => {
+	await Trail.find({}).then((trail) => {
+		res.json(trail);
+	}).catch((err) => {
+		console.log(err);
+		res.send(err);
+	});
+};
