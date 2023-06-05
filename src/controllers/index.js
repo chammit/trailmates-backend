@@ -42,3 +42,12 @@ exports.updateTrail = async (req, res) => {
 		res.send(err);
 	});
 };
+
+exports.deleteTrail = async (req, res) => {
+	await Trail.deleteOne({ _id: req.params.trailId }).then(() => {
+		res.json({ message: 'Successfully deleted trail' });
+	}).catch((err) => {
+		console.log(err);
+		res.send(err);
+	});
+};

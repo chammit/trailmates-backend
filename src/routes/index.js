@@ -12,9 +12,8 @@ const routes = (app) => {
 		.get(Controllers.getTrailWithId)
 		// update a trail
 		.put(Controllers.updateTrail)
-		.delete((req, res) => {
-			res.send('DELETE request sucessful!');
-		});
+		// DELETE a trail
+		.delete(Controllers.deleteTrail);
 	// app.route('/users');
 	// app.route('/posts');
 	// app.route('/messages');
