@@ -10,6 +10,7 @@ const routes = (app) => {
 	app.route('/trails/:trailId')
 		// GET specific trail
 		.get(Controllers.getTrailWithId)
+		// update a trail
 		.put(Controllers.updateTrail)
 		.delete((req, res) => {
 			res.send('DELETE request sucessful!');
